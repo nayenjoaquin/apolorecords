@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+html{
+	scroll-behavior: smooth;
+}
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Montserrat', sans-serif;
+}
+body{
+	background-color: #f5f5f5;
+	overflow: hidden;
+}
+
+
+/*--------------------------------------- EDICION HEADER ---------------------------------------*/
+
+header{
+	width: 100%;
+	height: 60px;
+	background-color: #fff;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 50px;
+	box-shadow: 0 2px 10px rgba(0,0,0,.2);
+	position: fixed;
+	z-index: 10;
+}
+.logo{
+	margin: auto 0;
+	height: 60px;
+	flex-grow: 1;
+	width: 100%;
+	min-width: 350px;
+	padding: 10px 0px;
+	font-size: 20px;
+	color: white;
+}
+.logo img{
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	object-position: left;
+	cursor: pointer;
+}
+nav{
+	margin: auto 0;
+	flex-grow: 	1;
+	width: 	100%;
+	min-width: 330px;
+	text-align: right;
+}
+ul{
+	list-style: none;
+}
+header li{
+	display: inline-block;
+	padding: 5px 10px;
+	margin: 0 5px;
+	border-radius: 20px;
+	transition: all .2s ease 0s;
+}
+nav a{
+	text-decoration: none;
+	color:#0d0d0d;
+}
+nav li:hover{
+	transform: scale(1.05);
+	background-color: rgba(255, 185, 0, .6);
+}
+
+
+/*--------------------------------------- EDICION LANDING PAGE ---------------------------------------*/
+
+.landing-page{
+	height: 100vh;
+	width: 100%;
+	padding: 70px 10px 10px 10px;
+	display: flex;
+}
+.landing-page-content{
+	height: 90%;
+	width: 85%;
+	margin: auto;
+	display: grid;
+	grid-template-rows: 3fr 2fr 2fr;
+	grid-template-columns: 2fr 2fr 2fr 3fr;
+}
+.landing-page-logo{
+	grid-column: 1 / span 3;
+}
+.landing-page-logo img{
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	object-position: center;
+	transform: scale(1.11) translateX(5%) translateY(50px);
+}
+.ultimos-lanzamientos{
+	width: 90%;
+	height: 100%;
+	background-color: white;
+	grid-row: 1 / span 3;
+	grid-column: 4 / 5;
+	margin-left: auto;
+	border-radius: 20px;
+	box-shadow: 0 0 20px rgba(0,0,0,.2);
+	padding: 20px 5px;
+	display: flex;
+	flex-direction: column;
+}
+.ultimos-lanzamientos h4{
+	text-align: center;
+	padding-bottom: 20px;	
+}
+.lanzamientos{
+	width: 100%;
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+.cancion{
+	width: 100%;
+	height: 50px;
+	padding: 5px;
+	margin: 5px 0;
+	display: flex;
+	justify-content: space-between;
+	background-color: #fff;
+	border-radius: 5px;
+	transition: all .2s ease 0s;
+}
+.cancion:hover{
+	background-color: #eee;
+	transform: scale(1.01);
+	cursor: pointer;
+}
+.cancion-img{
+	height: 40px;
+	width: 40px;
+	background-color: #aaa;
+	border-radius: 5px;
+	margin-right: 5px;
+}
+.cancion-info{
+	flex-grow: 1;
+	margin: auto 0;
+}
+.cancion-info h5{
+	font-size: 14px;
+	font-weight: 400;
+}
+.cancion-info h6{
+	font-size: 10px;
+}
+.lanzamientos-ver-mas{
+	text-align: left;
+	padding-top: 5px;
+	padding-left: 6px;
+}
+.lanzamientos-ver-mas a{
+	text-decoration: none;
+	color: rgb(205, 125, 0);
+}
+.lanzamientos-ver-mas h6{
+	transition: all .2s ease 0s;
+}
+.lanzamientos-ver-mas h6:hover{
+	transform: scale(1.01) translateX(2px);
+}
+.redes-sociales{
+	width: 100%;
+	height: 100px;
+	padding: 0 5px;
+}
+.redes-sociales h5{
+	font-size: 16px;
+	text-align: center;
+	padding-top: 20px;
+}
+.redes-logos{
+	display: flex;
+	height: 50px;
+	padding: 10px 0;
+	justify-content: space-around;
+	font-size: 40px;
+}
+.redes-logos a{
+	text-decoration: none;
+	color: #0d0d0d;
+}
+.redes-logos i{
+	transition: all .2s ease 0s;
+}
+.redes-logos i:hover{
+	transform: scale(1.1);
+}
+.landing-page-descripcion{
+	grid-row: 2 / 3;
+	grid-column: 1 / span 3;
+	text-align: right;
+	transform: translateY(5px);
+}
+.landing-page-descripcion h4{
+	font-weight: 400;
+}
+.landing-page-descripcion a{
+	text-decoration: none;
+	color: rgb(205, 125, 0);
+}
+.landing-page-descripcion h6{
+	font-weight: 400;
+	font-size: 10px;
+}
+.landing-page-plataformas{
+	grid-column: 1 / span 3;
+	grid-row: 3 / 4;
+	transform: translateY(-30px);
+}
+.landing-page-plataformas h4{
+	font-weight: 600;
+	text-align: center;
+}
+.plataformas{
+	display: flex;
+	height: 100px;
+	justify-content: center;
+	text-align: center;
+}
+.plataforma-logo{
+	font-size: 50px;
+	color: #080808;
+	padding: 10px 20px;	
+}
+
+
+
+/*--------------------------------------- EDICION NOSOTROS ---------------------------------------*/
+
+.nosotros-page{
+	height: 100vh;
+	width: 100%;
+	padding: 70px 10px 10px 20px;
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
+}
+.sello-description{
+	width: 100%;
+	margin: auto 0;
+	padding: 20px;
+	color: #555;
+	font-weight: 200px;
+	font-style: italic;
+}
+.nosotros-img1{
+	margin: auto;
+	width: 80%;
+	height: 100%;
+	padding: 10px 20px;
+	display: flex;
+}
+.img-sello{
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	border-radius: 20px;
+	margin: auto;
+	box-shadow: 0 0 10px rgba(0,0,0,.2);
+}
+.next-page-nosotros{
+	height: 20px;
+	width: 100%;
+	padding: 0 20px;
+	text-align: right;
+	grid-column: 1 / span 2;
+}
+.next-page a{
+	text-decoration: none;
+	color: rgb(205, 125, 0);
+	transition: all .2s ease 0s;
+}
+
+/*--------------------------------------- EDICION ARTISTAS ---------------------------------------*/
+
+.artistas-page{
+	height: 100vh;
+	max-height: 100vh;
+	width: 100%;
+	padding: 70px 10px 20px 10px;
+	display: flex;
+	flex-direction: column;
+}
+.artistas-flex{
+	flex-grow: 1;
+	display: flex;
+	justify-content: space-between;
+}
+.liox{
+	background-color: white;
+	flex-grow: 1;
+	min-width: 310px;
+	max-width: 400px;
+	height: 90%;
+	min-height: 530px;
+	border-radius: 20px;
+	margin: auto 20px;
+	box-shadow: 0 0 10px rgba(0,0,0,.2);
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+}
+.hooks{
+	background-color: white;
+	flex-grow: 1;
+	min-width: 310px;
+	max-width: 400px;
+	height: 90%;
+	min-height: 530px;
+	border-radius: 20px;
+	margin: auto 20px;
+	box-shadow: 0 0 10px rgba(0,0,0,.2);
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+}
+.npc{
+	background-color: white;
+	flex-grow: 1;
+	min-width: 310px;
+	max-width: 400px;
+	height: 90%;
+	min-height: 530px;
+	border-radius: 20px;
+	margin: auto 20px;
+	box-shadow: 0 0 10px rgba(0,0,0,.2);
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+}
+.perfil-img{
+	width: 200px;
+	height: 200px;
+	margin: 0 auto;
+}
+.perfil-img img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	border-radius: 20px;
+}
+.perfil-nombre{
+	width: 100%;
+	text-align: center;
+	padding: 10px;
+}
+.perfil-nombre h3{
+	width: 100%;
+	font-size: 20px;
+}
+.perfil-descripcion{
+	width: 100%;
+	font-size: 11px;
+	text-align: center;
+	margin-top: -10px;
+}
+.perfil-cita{
+	width: 200px;
+	flex-grow: 1;
+	min-width: 200px;
+	margin: 10px auto;
+	font-size: 11px;
+	font-style: italic;
+	text-align: justify;
+	color: #666;
+}
+.perfil-escribeme{
+	width: 100%;
+	padding: 10px;
+	padding-bottom: 0;
+	display: flex;
+	justify-content:  center;
+}
+.perfil-escribeme form{
+	width: 300px;
+	height: 30px;
+	display: flex;
+}
+.escribeme-input{
+	outline: none;
+	border: none;
+	background-color: #ddd;
+	height: 30px;
+	flex-grow: 1;
+	border-radius: 15px;
+	padding: 0 10px;
+	margin-right: 10px;
+}
+.escribeme-enviar{
+	outline: none;
+	border: none;
+	height: 30px;
+	width: 60px;
+	border-radius: 15px;
+	background-color: rgb(255, 185, 0,.6);
+	cursor: pointer;
+}
+.next-page-artistas{
+	min-height: 20px;
+	height: 20px;
+	width: 100%;
+	padding-right: 20px;
+	padding-top: 10px;
+	text-align: right;
+}
